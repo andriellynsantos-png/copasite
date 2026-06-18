@@ -29,7 +29,7 @@ const perguntas = {
 { pergunta: "Qual foi o placar de Brasil x Croácia na abertura de 2014?", opcoes: ["2x0","3x1","1x1","4x2"], resposta: "3x1" },
 { pergunta: "Quem marcou o gol da vitória da Arábia Saudita contra a Argentina em 2022?", opcoes: ["Salem Al-Dawsari","Messi","Di María","Lautaro"], resposta: "Salem Al-Dawsari" },
 { pergunta: "Quem eliminou o Brasil na Copa de 2018?", opcoes: ["Bélgica","França","Croácia","Holanda"], resposta: "Bélgica" },
-{ pergunta: "Qual seleção venceu o Brasil por 7x1 em 2014?", opcoes: ["Alemanha","Holanda","França","Argentina"], resposta: "Alemanha" },
+{ pergunta: "Qual seleção venceu o Curação por 7x1 em 2026?", opcoes: ["Alemanha","Holanda","França","Argentina"], resposta: "Alemanha" },
 { pergunta: "Quem marcou o gol do título da Alemanha em 2014?", opcoes: ["Klose","Götze","Müller","Özil"], resposta: "Götze" },
 { pergunta: "Qual foi a seleção surpresa que chegou à semifinal em 2022?", opcoes: ["Marrocos","Japão","Coreia","México"], resposta: "Marrocos" },
 { pergunta: "Quantos títulos tinha a Argentina após vencer em 2022?", opcoes: ["2","3","4","5"], resposta: "3" },
@@ -193,6 +193,7 @@ paises2026.forEach(pais => {
 
 const fundos = {
   "Brasil": "linear-gradient(135deg,#009739,#ffdf00,#002776)",
+  "Cabo Verde": "linear-gradient(135deg,#ffffff,#1b5bda,#f00a0a)",
   "Argentina": "linear-gradient(135deg,#74acdf,#ffffff,#74acdf)",
   "França": "linear-gradient(135deg,#0055a4,#ffffff,#ef4135)",
   "Alemanha": "linear-gradient(135deg,#000000,#dd0000,#ffce00)",
