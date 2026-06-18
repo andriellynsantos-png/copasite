@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Copa Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <button class="logo" onclick="mostrarAba('inicio')">
+    ⚽ Quiz Copa <span>Challenge</span>
+  </button>
+
+  <nav>
+    <button onclick="mostrarAba('inicio')">Início</button>
+    <button onclick="mostrarAba('historico')">Histórico</button>
+    <button onclick="mostrarAba('quiz')">Quiz</button>
+  </nav>
+</header>
+
+<main>
+
+  <section id="inicio" class="aba ativa inicio">
+
+    <div class="hero">
+      <span class="tag"> Projeto Escolar</span>
+      <h1>Aprenda a história das <span>Copas do Mundo</span> jogando</h1>
+      <p>Um site interativo com quiz, histórico e curiosidades sobre as Copas do Mundo.</p>
+      <button class="btn-principal" onclick="mostrarAba('quiz')">⚽ Começar Quiz</button>
+    </div>
+
+    <section class="curiosidades">
+      <h2> Curiosidades das Copas </h2>
+
+      <div class="cards-curiosidade">
+        <div class="card-curiosidade">
+          <h3>🏆 Brasil</h3>
+          <p>Maior campeão da história com 5 títulos mundiais.</p>
+        </div>
+
+        <div class="card-curiosidade">
+          <h3>⚽ Primeira Copa</h3>
+          <p>A primeira Copa aconteceu em 1930, no Uruguai.</p>
+        </div>
+
+        <div class="card-curiosidade">
+          <h3>🌎 Participação</h3>
+          <p>Mais de 80 países já participaram de pelo menos uma Copa.</p>
+        </div>
+
+        <div class="card-curiosidade">
+          <h3>🏟️ Recorde</h3>
+          <p>O Maracanã recebeu quase 200 mil pessoas na final de 1950.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="carrossel-curiosidades">
+  <h2>🌎 Curiosidades de Seleções</h2>
+  <p>Arraste para o lado e veja algumas seleções famosas.</p>
+
+  <div class="carrossel">
+    <div class="card-pais">
+        <div class="bandeira"><br></div>
+      <h3>Brasil</h3>
+      <p>É o maior campeão da Copa do Mundo, com 5 títulos.</p>
+    </div>
+
+    <div class="card-pais">
+        <div class="bandeira"><ar></div>
+      <h3>Argentina</h3>
+      <p>Foi campeã em 2022 após uma final emocionante contra a França.</p>
+    </div>
+
+    <div class="card-pais">
+        <div class="bandeira"><fr></div>
+      <h3>França</h3>
+      <p>Chegou às finais de 2018 e 2022, mostrando muita força mundial.</p>
+    </div>
+
+    <div class="card-pais">
+        <div class="bandeira"><de></div>
+      <h3>Alemanha</h3>
+      <p>Tem 4 títulos e é uma das seleções mais tradicionais da história.</p>
+    </div>
+
+    <div class="card-pais">
+        <div class="bandeira"><uy></div>
+      <h3>Uruguai</h3>
+      <p>Venceu a primeira Copa do Mundo, em 1930.</p>
+    </div>
+
+    <div class="card-pais">
+        <div class="bandeira"><es></div>
+      <h3>Espanha</h3>
+      <p>Foi campeã mundial em 2010, com um estilo de jogo de muitos passes.</p>
+    </div>
+
+    <div class="card-pais">
+        <div class="bandeira"><pt></div>
+      <h3>Portugal</h3>
+      <p>Ainda não venceu uma Copa, mas tem grandes jogadores na história.</p>
+    </div>
+
+    <div class="card-pais">
+        <div class="bandeira"><ma></div>
+      <h3>Marrocos</h3>
+      <p>Foi a primeira seleção africana a chegar à semifinal da Copa.</p>
+    </div>
+  </div>
+</section>
+
+    <section class="chamada">
+      <div>
+        <h2>⚽ Pronto para testar seus conhecimentos?</h2>
+        <p>Participe do quiz e descubra o quanto você sabe sobre as Copas!</p>
+      </div>
+
+      <button onclick="mostrarAba('quiz')">Ir para o Quiz</button>
+    </section>
+
+  </section>
+
+  <section id="historico" class="aba historico">
+    <h2>Histórico das Copas</h2>
+    <p class="subtitulo">Conheça momentos importantes do Brasil nas Copas recentes.</p>
+
+    <div class="historico-grid">
+      <div class="copa brasil">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg">
+        <h3>Copa 2014 - Brasil</h3>
+        <p>O Brasil foi sede da Copa. A seleção começou vencendo a Croácia por 3x1, com destaque para Neymar.</p>
+      </div>
+
+      <div class="copa russia">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg">
+        <h3>Copa 2018 - Rússia</h3>
+        <p>A Rússia recebeu 32 seleções e sediou uma das Copas mais tecnológicas da história. A França foi campeã.</p>
+      </div>
+
+      <div class="copa catar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Qatar.svg">
+        <h3>Copa 2022 - Catar</h3>
+        <p>Primeira Copa realizada no Oriente Médio. A Argentina conquistou o título após uma final contra a França.</p>
+      </div>
+    </div>
+
+    <h2 class="titulo-paises">Países da Copa 2026</h2>
+    <p class="subtitulo">Clique em uma seleção para ver um resumo.</p>
+
+    <div id="paisesGrid" class="paises-grid"></div>
+
+    <div id="infoPais" class="info-pais">
+      <button onclick="fecharPais()">X</button>
+      <img id="paisBandeira" src="">
+      <h2 id="paisNome"></h2>
+      <p id="paisTexto"></p>
+    </div>
+  </section>
+
+  <section id="quiz" class="aba quiz">
+    <h2>Quiz da Copa</h2>
+
+    <div class="quiz-container">
+      <div class="quiz-box">
+        <label>Escolha a dificuldade:</label>
+
+        <select id="dificuldade" onchange="mudarDificuldade()">
+          <option value="facil">Fácil</option>
+          <option value="medio">Médio</option>
+          <option value="dificil">Difícil</option>
+        </select>
+
+        <h3 id="pergunta"></h3>
+        <div id="opcoes"></div>
+        <p id="resultado"></p>
+
+        <button onclick="proximaPergunta()">Próxima pergunta</button>
+      </div>
+
+      <div class="ranking">
+        <h3>🏆 Ranking</h3>
+        <p>Pontuação atual: <strong id="pontos">0</strong></p>
+
+        <ol id="listaRanking">
+          <li>Você - 0 pontos</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  ⚽Quiz Copa Challenge | Projeto escolar
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
